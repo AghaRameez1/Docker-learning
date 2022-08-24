@@ -7,7 +7,7 @@ echo $ip_address
 
 cd reverse-proxy
 
-sed -i -r 's/IP_ADDRESS/\1 $ip_address/' default.conf
+sed -i -e 's|IP_ADDRESS|'$ip_address'|g' default.conf
 
 
 cd ..
